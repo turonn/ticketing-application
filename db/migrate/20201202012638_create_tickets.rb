@@ -3,7 +3,7 @@ class CreateTickets < ActiveRecord::Migration[6.0]
     create_table :tickets do |t|
       t.belongs_to :game
       t.belongs_to :user
-      t.bool :used
+      t.boolean :used
       t.string :ticket_code
     end
   end
