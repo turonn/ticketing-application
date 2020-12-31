@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 2020_12_02_012906) do
   enable_extension "plpgsql"
 
   create_table "games", force: :cascade do |t|
-    t.string "sport"
-    t.string "gender"
-    t.string "level"
-    t.string "home_team"
-    t.string "visiting_team"
+    t.string "sport", null: false
+    t.string "gender", null: false
+    t.string "level", null: false
+    t.string "home_team", null: false
+    t.string "visiting_team", null: false
     t.integer "max_capacity"
-    t.datetime "event_date"
-    t.integer "price"
+    t.datetime "event_date", null: false
+    t.integer "price", null: false
   end
 
   create_table "tickets", force: :cascade do |t|
@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(version: 2020_12_02_012906) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "email", null: false
     t.string "cellphone"
-    t.string "password"
+    t.string "password", null: false
   end
 
 end
