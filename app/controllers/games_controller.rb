@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-    before_action :set_task, only: [:show, :edit, :update, :destroy]
+    before_action :set_game, only: [:show, :edit, :update, :destroy]
 
     def show
     end
@@ -38,17 +38,20 @@ class GamesController < ApplicationController
     end
 
     def destroy
-        @game.destroy
-
         respond_to do |format|
-            format.html { redirect_to @home, notice: "Game was deleted successfully!" }
-            format.json { render :show, status: :created, location: @game }
+            if @game.destroy
+                format.html { redirect_to @home, notice: "Game was deleted successfully!" }
+                format.json { render :show, status: :created, location: @game }
+            else
+                format.html { render :edit, notice: "Game failed to delete!" }
+                format.json { render json: @game.errors, status: :unprocessable_entity}
+            end
         end
     end
 
     private
 
-    def  set_task
+    def  set_game
         @game = Game.find(params[:id])
     end
 
