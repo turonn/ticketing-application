@@ -11,6 +11,10 @@ class GamesController < ApplicationController
     def edit
     end
 
+    def index
+        @games = Game.all
+    end
+
     def create
         @game = Game.new(game_params)
 

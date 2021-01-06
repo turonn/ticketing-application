@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#adds the user authentication https://github.com/heartcombo/devise
+gem 'devise'
+
 #Netflix Fast JSONAPI serializer readapted: https://github.com/jsonapi-serializer/jsonapi-serializer
 gem 'jsonapi-serializer'
 
