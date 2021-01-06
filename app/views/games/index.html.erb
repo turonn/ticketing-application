@@ -3,7 +3,7 @@
     <% @games.each do |game| %>
     <li><%= game.id %></li>
     <ul>
-    <%gem 'devise' game.as_json.each do |key, value| %>
+    <% game.as_json.each do |key, value| %>
         <li><%= "#{key}, #{value}" %></li>
         <% end %>
     </ul>
