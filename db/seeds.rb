@@ -38,14 +38,18 @@ users = User.create([
         last_name: "Ever",
         email: "my@email.com",
         cellphone: "1234567890",
-        password: "12345",
+        encrypted_password: "password1",
+        created_at: DateTime.new(2021,1,7),
+        updated_at: DateTime.new(2021,1,7)
     },
     {
         first_name: "Jeorge",
         last_name: "Simpilton",
         email: "jeo@email.com",
         cellphone: "2345678901",
-        password: "pas3wrid",
+        encrypted_password: "pas3wrid",
+        created_at: DateTime.new(2021,1,7),
+        updated_at: DateTime.new(2021,1,7)
     }
 ])
 

@@ -1,1 +1,11 @@
 <p>This is the users index</p>
+<ul>
+    <% @users.each do |user| %>
+    <li><%= user.id %></li>
+    <ul>
+    <% user.as_json.each do |key, value| %>
+        <li><%= "#{key}, #{value}" %></li>
+        <% end %>
+    </ul>
+    <% end %>
+ </ul>
