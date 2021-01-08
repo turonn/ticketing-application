@@ -7,13 +7,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <p class="notice"><%= notice %>
-    <p class="alert"><%= alert %>
+    <p class="alert"><%= alert %> <%#this is where the padding is coming from!%>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'hello-world-bundle.js' %>
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
     <%= yield %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
     
   </body>
 </html>
