@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReactOnRailsWithWebpacker</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'ticketing-application-bundle' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
