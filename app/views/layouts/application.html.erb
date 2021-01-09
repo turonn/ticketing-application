@@ -4,12 +4,11 @@
     <title>TicketingApplication</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
   </head>
 
   <body>
     <%= yield %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+    <%= javascript_pack_tag 'hello-world-bundle' %>
   </body>
 </html>
