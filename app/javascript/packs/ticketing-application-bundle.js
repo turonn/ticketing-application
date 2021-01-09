@@ -1,4 +1,4 @@
-import ReactOnRails from 'react-on-rails'; //changed
+import ReactOnRails from 'react-on-rails'; //changed test
 
 import HelloWorld from '../bundles/TicketingApplication/components/HelloWorld';
 
